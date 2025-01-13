@@ -10,10 +10,12 @@
     <a-scene>
 
         <!-- Blue -->
-        <a-entity
-        gltf-model="materials/Hallyway.glb" 
-        position="-1 0.5 -3" 
-        scale="5 5 5">
+        <a-entity gltf-model="materials/desert/Desert_Floor.glb" position="140 0 0" scale="">
+       
+    <a-entity gltf-model="materials/desert/Pyramid.glb" position="23.086 6.183 -103.54457" scale="60 60 60" rotation="">
+    </a-entity>
+        </a-entity>
+        <a-entity gltf-model="materials/desert/Cowboy.glb" position="127.51947 0.06919 4.54739" scale="100 100 100">
         </a-entity>
         
         <!-- Opal -->
@@ -23,13 +25,21 @@
         scale="0.4 0.4 0.4"
         animation="property: rotation; to: 0 -360 0;  dur: 500; easing: linear" >
         </a-entity>
+
         <!-- Pleum -->
+        <a-entity gltf-model="materials/Penguin.glb" position="-1.76462 0.62877 -0.1471" scale="0.4 0.4 0.4" animation="dur: 500; easing: linear; property: rotation; to: 0 -360 0">
+        </a-entity>
+
         <!-- Art -->
         <a-entity
         gltf-model="materials/moo_deng.glb" 
         position="-1 0.5 -3" 
         scale="0.4 0.4 0.4"
         animation="property: rotation; to: 0 -360 0; loop: true; dur: 500; easing: linear" >
+        </a-entity>
+
+        <a-entity
+            gltf-model="materials/Floor.glb">
         </a-entity>
 
        
