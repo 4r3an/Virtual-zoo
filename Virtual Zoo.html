@@ -28,15 +28,39 @@
         </a-entity>
     
         <!-- Art -->
+        <a-entity id="moo_deng" gltf-model="materials/forest/moo_deng.glb" position="-40.1 -0.7 33.9" scale="" rotation="9.8 23.85 0.08"></a-entity>
+
+        <a-entity id="infoText" text="value: ; color: black; width: 4;" position="0 0 0"></a-entity>
 
 
        <!-- Camera -->
-        <a-entity camera="" position="-65 5 85" look-controls="" wasd-controls="" rotation="0 0 0" data-aframe-inspector-original-camera=""></a-entity>
+        <a-camera position="-65 5 85" look-controls="" wasd-controls="" rotation="0 -90 0">
+            <a-cursor></a-cursor>
+        </a-camera>
 
        
 
         <a-sky color="#ECECEC"></a-sky>
         <!-- <a-sky color="#FFFFFF" src="w2.jpg"></a-sky> -->
     </a-scene>
+
+    <script>
+        function showInfoText(modelId, text, position, disappearTime) {
+            var model = document.querySelector(modelId);
+            model.addEventListener('click', function () {
+                var infoText = document.querySelector('#infoText');
+                infoText.setAttribute('text', 'value', text);
+                infoText.setAttribute('position', position);
+                setTimeout(function () {
+                    infoText.setAttribute('text', 'value', '');
+                }, disappearTime);
+            });
+        }
+
+        // Add event listeners for models
+        showInfoText('#moo_deng', 'This is Moo Deng. Moo Deng is a type of forest animal.', '-40 2 30', 5000);
+        // Add more models as needed
+        // showInfoText('#other_model_id', 'Description for other model', 'position', disappearTime);
+    </script>
 </body>
 </html>
