@@ -434,13 +434,42 @@
             rotation="9.8 23.85 0.08"></a-entity>
 
         <a-entity id="infoText" text="value: ; color: black; width: 4;" position="0 0 0"></a-entity>
+
+        <!-- Asset -->
         <asset>
             <img id="moo_deng_info" src="materials/forest/moo_deng_info.png" crossorigin="anonymous">
+            <a-mixin
+                id="frame"
+                geometry="primitive: plane; width: 0.5783552; height: 0.8192"
+                material="color: white; shader: flat"
+                animation__scale="property: scale; to: 10.2 10.2 10.2; dur: 200; startEvents: mouseenter"
+                animation__scale_reverse="property: scale; to: 5 5 5; dur: 200; startEvents: mouseleave"
+                ></a-mixin>
+                <a-mixin
+                id="poster"
+                geometry="primitive: plane; width: 0.544768; height: 0.786432"
+                material="color: white; shader: flat"
+                material="shader: flat"
+                position="0 0 0.005"
+                ></a-mixin>
+                <a-mixin
+                id="AnimalImage"
+                geometry="primitive: plane; width: 1.5; height: 0.81"
+                material="src: #moo_deng; shader: flat; transparent: true"
+                position="0 0.495 0.002">
+            </a-mixin>
         </asset>
+
+        <!-- Poster menu -->
+         <a-entity id="menu" highlight>
+            <a-entity id="moo_deng_info_button" position="-43 6 33.9" rotation="0 90 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #moo_deng_info" mixin="poster"></a-entity>
+            </a-entity>
+         </a-entity>
 
 
         <!-- Camera -->
-        <a-entity camera="" position="-65 5 85" look-controls="" wasd-controls="" rotation="0 0 0"
+        <a-entity camera="" position="-65 5 85" look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false" wasd-controls="" rotation="0 0 0"
             data-aframe-inspector-original-camera=""></a-entity>
         <a-camera position="-65 5 85" look-controls="" wasd-controls="" rotation="0 -90 0">
             <a-cursor></a-cursor>
@@ -466,7 +495,7 @@
         }
 
         // Add event listeners for models
-        showInfoText('#moo_deng', 'This is Moo Deng. Moo Deng is a type of forest animal.', '-40 2 30', 5000);
+        // showInfoText('#moo_deng', 'This is Moo Deng. Moo Deng is a type of forest animal.', '-40 2 30', 5000);
         // Add more models as needed
         // showInfoText('#other_model_id', 'Description for other model', 'position', disappearTime);
     </script>
