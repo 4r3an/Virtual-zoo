@@ -455,7 +455,9 @@
             <!-- Frog -->
             <a-entity id="frog" gltf-model="materials/forest/Forest_Frog.glb" position="-45.27395 1.55244 57.89715" scale="0.1 0.1 0.1" rotation="4.94806351874979 36.40172759804659 -9.43031235005822"></a-entity>
             <!-- Tiger -->
-            <a-entity id="frog" gltf-model="materials/forest/Forest_Tiger.glb" position="49.64489 1.73664 9.26552" scale="0.03 0.03 0.03" rotation="0 -73.60273132030069 0"></a-entity>
+            <a-entity id="tiger" gltf-model="materials/forest/Forest_Tiger.glb" position="49.64489 1.73664 9.26552" scale="0.03 0.03 0.03" rotation="0 -73.60273132030069 0"></a-entity>
+            <!-- Wild Cat -->
+            <a-entity id="wild_cat" gltf-model="materials/forest/Wild Cat.glb" position="-13.28299 -0.47363 -39.04601" scale="" rotation="0 29.192199661915442 0"></a-entity>
 
         <a-entity id="infoText" text="value: ; color: black; width: 4;" position="0 0 0"></a-entity>
 
@@ -467,6 +469,7 @@
             <img id="shiba_inu_info" src="materials/forest/shiba_inu_info.png" crossorigin="anonymous">
             <img id="tiger_info" src="materials/forest/tiger_info.png" crossorigin="anonymous">
             <img id="frog_info" src="materials/forest/frog_info.png" crossorigin="anonymous">
+            <img id="wild_cat_info" src="materials/forest/wild_cat_info.png" crossorigin="anonymous">
             <a-mixin
                 id="frame"
                 geometry="primitive: plane; width: 0.5783552; height: 0.8192"
@@ -503,7 +506,7 @@
             </a-entity>
 
             <!-- Deer_info -->
-            <a-entity id="deer_info_button" position="-37.242 6 -17.723" rotation="0 31.042 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+            <a-entity id="deer_info_button" position="-37.771 6 -18.914" rotation="0 31.042 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
                 <a-entity material="src: #deer_info" mixin="poster"></a-entity>
             </a-entity>
 
@@ -512,12 +515,19 @@
                 <a-entity material="src: #shiba_inu_info" mixin="poster"></a-entity>
             </a-entity>
 
+            <!-- Frog -->
             <a-entity id="frog_info_button" position="-46.251 6 58.742" rotation="0 130.610 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
                 <a-entity material="src: #frog_info" mixin="poster"></a-entity>
             </a-entity>
 
+            <!-- Tiger -->
             <a-entity id="tiger_info_button" position="54.179 6 8.039" rotation="0 -73.60273132030069 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
                 <a-entity material="src: #tiger_info" mixin="poster"></a-entity>
+            </a-entity>
+
+            <!-- Wild_Cat -->
+            <a-entity id="wild_cat_info_button" position="-14.544 6 -41.904" rotation="0 29.192199661915442 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #wild_cat_info" mixin="poster"></a-entity>
             </a-entity>
             
          </a-entity>
