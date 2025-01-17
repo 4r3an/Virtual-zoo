@@ -445,8 +445,8 @@
             <a-entity id="moo_deng" gltf-model="materials/forest/moo_deng.glb" position="-40.1 -0.7 33.9" scale=""
                 rotation="9.8 23.85 0.08"></a-entity>
             <!-- wolf diaodai -->
-            <a-entity id="wolf_diaodai01" gltf-model="materials/forest/Forest_Wolf.glb" position="31.73598 -0.31 28.58327" scale="" rotation="0 -28.91775287804778 0" animation-mixer></a-entity>
-            <a-entity id="wolf_diaodai02" gltf-model="materials/forest/Forest_Wolf.glb" position="34.49 -0.35 30.76304" scale="" rotation="0 -60.34219610979291 0" animation-mixer></a-entity>
+            <a-entity id="wolf_diaodai01" gltf-model="materials/forest/Forest_Wolf.glb" position="31.73598 -0.31 28.58327" scale="" rotation="0 -28.91775287804778 0"></a-entity>
+            <a-entity id="wolf_diaodai02" gltf-model="materials/forest/Forest_Wolf.glb" position="34.49 -0.35 30.76304" scale="" rotation="0 -60.34219610979291 0"></a-entity>
             <a-entity id="wolf_diaodai03" gltf-model="materials/forest/Forest_Wolf.glb" position="34.96 -0.18 34.23993" scale="" rotation="0 -92.37 0"></a-entity>
             <!-- deer -->
             <a-entity id="forest_deer" gltf-model="materials/forest/Forest_Deer.glb" position="-36.359 0 -16.363" scale="1 1 1" rotation="0 36.103 0"></a-entity>
@@ -465,6 +465,8 @@
             <img id="wolf_diaodai_info" src="materials/forest/wolf_diaodai_info.png" crossorigin="anonymous">
             <img id="deer_info" src="materials/forest/deer_info.png" crossorigin="anonymous">
             <img id="shiba_inu_info" src="materials/forest/shiba_inu_info.png" crossorigin="anonymous">
+            <img id="tiger_info" src="materials/forest/tiger_info.png" crossorigin="anonymous">
+            <img id="frog_info" src="materials/forest/frog_info.png" crossorigin="anonymous">
             <a-mixin
                 id="frame"
                 geometry="primitive: plane; width: 0.5783552; height: 0.8192"
@@ -511,11 +513,11 @@
             </a-entity>
 
             <a-entity id="frog_info_button" position="-46.251 6 58.742" rotation="0 130.610 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
-                <a-entity material="src: #shiba_inu_info" mixin="poster"></a-entity>
+                <a-entity material="src: #frog_info" mixin="poster"></a-entity>
             </a-entity>
 
             <a-entity id="tiger_info_button" position="54.179 6 8.039" rotation="0 -73.60273132030069 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
-                <a-entity material="src: #shiba_inu_info" mixin="poster"></a-entity>
+                <a-entity material="src: #tiger_info" mixin="poster"></a-entity>
             </a-entity>
             
          </a-entity>
