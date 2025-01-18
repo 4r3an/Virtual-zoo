@@ -23,7 +23,7 @@
         <a-entity gltf-model="materials/desert/Eagle.glb" position="85.00461 25.62416 23.72994" scale="0.03 0.03 0.03" rotation="0 32.128035404165786 0"></a-entity>
         <a-entity gltf-model="materials/desert/Eagle.glb" position="85.00461 25.33817 26.60962" scale="0.03 0.03 0.03" rotation="0 32.128035404165786 0"></a-entity>
         <a-entity gltf-model="materials/desert/Zebra.glb" position="123.50501 -0.66146 -8.19308" scale="" rotation="0 48.07746154722251 0"></a-entity>
-        <a-entity gltf-model="materials/desert/Elephant.glb" position="155.5981 9 -18.64148" scale="0.1 0.1 0.1" rotation="0.7070299191914359 -1.828308324262457 -0.3237211542489151"></a-entity>
+        <a-entity gltf-model="materials/desert/Elephant.glb" position="155.5981 9 -18.64148" scale="0.09 0.09 0.09" rotation="0.7070299191914359 -1.828308324262457 -0.3237211542489151"></a-entity>
         <a-entity gltf-model="materials/desert/Ostrich.glb" position="161.34661 -0.05538 -3.57038" scale="0.65 0.65 0.65" rotation="0 -22.386606971351526 0"></a-entity>
         <a-entity gltf-model="materials/desert/Spotted hyena.glb" position="164.37839 -0.369 8.39422" scale="" rotation="0 -59.55437914148803 0"></a-entity>
         <a-entity gltf-model="materials/desert/African wild dog.glb" position="119.907 -0.369 32.53276" scale="" rotation="0 52.43900000000001 0"></a-entity>
@@ -31,6 +31,68 @@
         <a-entity gltf-model="materials/desert/Camp fire.glb" position="88.16533 0.087 53.21957" scale="0.05 0.05 0.05"></a-entity>
         <a-entity gltf-model="materials/desert/Tent.glb" position="87.42571 6 36.98799" scale="10 10 10"></a-entity>
         <a-entity gltf-model="materials/desert/Desert Pillar.glb" position="187.42833 20.99429 46.35425" scale="100 100 100"></a-entity>
+
+         
+         <asset>
+            <img id="Camel_info" src="materials/desert/Camel-Poster.png" crossorigin="anonymous">
+            <img id="Eagle_info" src="materials/desert/Eagle-Poster.png" crossorigin="anonymous">
+            <img id="Zebra_info" src="materials/desert/Zebra-Poster.png" crossorigin="anonymous">
+            <img id="Elephant_info" src="materials/desert/Elephant-Poster.png" crossorigin="anonymous">
+            <img id="Ostrich_info" src="materials/desert/Ostrich-Poster.png" crossorigin="anonymous">
+            <img id="Spotted hyena_info" src="materials/desert/Spotted hyena-Poster.png" crossorigin="anonymous">
+            <img id="African wild dog_info" src="materials/desert/African wild dog-Poster.png" crossorigin="anonymous">
+            <a-mixin
+                id="frame"
+                geometry="primitive: plane; width: 0.5783552; height: 0.8192"
+                material="color: white; shader: flat"
+                animation__scale="property: scale; to: 10.2 10.2 10.2; dur: 200; startEvents: mouseenter"
+                animation__scale_reverse="property: scale; to: 5 5 5; dur: 200; startEvents: mouseleave"
+                ></a-mixin>
+                <a-mixin
+                id="poster"
+                geometry="primitive: plane; width: 0.544768; height: 0.786432"
+                material="color: white; shader: flat"
+                material="shader: flat"
+                position="0 0 0.005"
+                ></a-mixin>
+                <a-mixin
+                id="AnimalImage"
+                geometry="primitive: plane; width: 1.5; height: 0.81"
+                material="src: #moo_deng; shader: flat; transparent: true"
+                position="0 0.495 0.002">
+            </a-mixin>
+        </asset>
+            <!-- Camel_info -->
+            <a-entity id="Camel_info_button" position="170.361 11.5 36.988" rotation="0 -1.89305255511224 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Camel_info" mixin="poster"></a-entity>
+            </a-entity>
+             <!-- Eagle_info -->
+             <a-entity id="Eagle_info_button" position="99 6 36.98799" rotation="0 -1.89305255511224 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Eagle_info" mixin="poster"></a-entity>
+            </a-entity>
+             <!-- Zebra_info -->
+             <a-entity id="Zebra_info_button" position="123.50501 10 -8.19308" rotation="0 -5 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Zebra_info" mixin="poster"></a-entity>
+            </a-entity>
+            <!-- Elephant_info -->
+            <a-entity id="Elephant_info_button" position="143.80945 10 -18.641" rotation="0 28.28463451442822 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Elephant_info" mixin="poster"></a-entity>
+            </a-entity>
+              <!--Ostrict_info -->
+              <a-entity id="Ostrich_info_button" position="164.20557 10.10818 -11.49065" rotation="0 -31.824940730541577 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Ostrich_info" mixin="poster"></a-entity>
+            </a-entity>
+            <!--Spotted hyena_info -->
+            <a-entity id="Spotted hyena_info_button" position="164.378 7.3353 8.41133" rotation="0 -58.10937958216809 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+                <a-entity material="src: #Spotted hyena_info" mixin="poster"></a-entity>
+            </a-entity>
+           <!--"African wild dog_info -->
+           <a-entity id="African wild dog_info_button" position="118.40536 6.33629 31.47646" rotation="0 64.93617171115186 0" scale="5 5 5" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #African wild dog_info" mixin="poster"></a-entity>
+        </a-entity>
+          
+            
+         </a-entity>
  
     
 
